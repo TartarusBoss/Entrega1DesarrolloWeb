@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportZone - Tienda Deportiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+// Header y navegacion
+  <header class="header">
+    <div class="logo">
+      <h2>SportZone</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+//Seccion de inicio
+    <section id="inicio" class="hero">
+      <h1>Equípate para la Victoria</h1>
+      <p>Los mejores artículos deportivos para Fútbol, Básquetbol y MMA.</p>
+    </section>
+
+//Seccion de catálogo
+    <section id="catalogo" class="catalogo-section">
+      <h2>Nuestro Catálogo</h2>
+      
+//Filtra por categoría
+      <div class="filtros">
+        <button class="btn-filtro active" data-categoria="todos">Todos</button>
+        <button class="btn-filtro" data-categoria="futbol">Fútbol</button>
+        <button class="btn-filtro" data-categoria="basket">Básquet</button>
+        <button class="btn-filtro" data-categoria="mma">MMA</button>
+      </div>
+//Acá en este contenedor JS carga las tarjetas
+      <div id="contenedor-productos" class="grid-productos">
+      </div>
+    </section>
+
+//Formulario de contacto
+    <section id="contacto" class="contacto-section">
+      <h2>Contáctanos o Haz tu Pedido</h2>
+      
+      <form id="form-contacto" class="form-contacto" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" placeholder="Ej. Carlos Pérez">
+          <span class="error-message" id="error-nombre"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" placeholder="ejemplo@correo.com">
+          <span class="error-message" id="error-email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje o Pedido:</label>
+          <textarea id="mensaje" rows="4" placeholder="Escribe tu consulta o los productos que deseas solicitar..."></textarea>
+          <span class="error-message" id="error-mensaje"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        <p id="mensaje-exito" class="exito-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 SportZone. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
