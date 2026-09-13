@@ -1,4 +1,3 @@
-// ARREGLO DE OBJETOS (DATOS DEL CATÁLOGO)
 const productos = [
   {
     id: 1,
@@ -50,13 +49,13 @@ const productos = [
   }
 ];
 
-// ELEMENTOS DEL DOM
+
 const contenedorProductos = document.getElementById("contenedor-productos");
 const botonesFiltro = document.querySelectorAll(".btn-filtro");
 
-// FUNCIÓN PARA MOSTRAR LOS PRODUCTOS EN EL DOM
+
 function mostrarProductos(lista) {
-  contenedorProductos.innerHTML = ""; // Limpiar contenedor
+  contenedorProductos.innerHTML = ""; 
 
   lista.forEach(producto => {
     const card = document.createElement("article");
@@ -76,10 +75,10 @@ function mostrarProductos(lista) {
   });
 }
 
-// EVENTO DE FILTRADO (EVENTOS + MANIPULACIÓN DOM)
+
 botonesFiltro.forEach(boton => {
   boton.addEventListener("click", (e) => {
-    // Cambiar clase activa en los botones
+
     botonesFiltro.forEach(btn => btn.classList.remove("active"));
     e.target.classList.add("active");
 
@@ -94,5 +93,52 @@ botonesFiltro.forEach(boton => {
   });
 });
 
-// Cargar todos los productos al iniciar
+
 mostrarProductos(productos);
+
+
+const formContacto = document.getElementById("form-contacto");
+const inputNombre = document.getElementById("nombre");
+const inputEmail = document.getElementById("email");
+const inputMensaje = document.getElementById("mensaje");
+
+const errorNombre = document.getElementById("error-nombre");
+const errorEmail = document.getElementById("error-email");
+const errorMensaje = document.getElementById("error-mensaje");
+const mensajeExito = document.getElementById("mensaje-exito");
+
+formContacto.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+
+  let esValido = true;
+
+
+  errorNombre.textContent = "";
+  errorEmail.textContent = "";
+  errorMensaje.textContent = "";
+  mensajeExito.textContent = "";
+
+
+  if (inputNombre.value.trim().length < 3) {
+    errorNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+    esValido = false;
+  }
+
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(inputEmail.value.trim())) {
+    errorEmail.textContent = "Ingresa un correo electrónico válido.";
+    esValido = false;
+  }
+
+
+  if (inputMensaje.value.trim().length < 10) {
+    errorMensaje.textContent = "El mensaje debe tener al menos 10 caracteres.";
+    esValido = false;
+  }
+
+  if (esValido) {
+    mensajeExito.textContent = "¡Gracias! Tu mensaje ha sido enviado correctamente.";
+    formContacto.reset();
+  }
+});
