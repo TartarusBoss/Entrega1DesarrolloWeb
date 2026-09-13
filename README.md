@@ -29,8 +29,8 @@ La información se relaciona conectando los productos con las categorías deport
 - Al intentar enviar el formulario, JavaScript comprueba que el nombre no esté vacío, que el mensaje tenga la longitud adecuada y valida que el correo ingresado tenga la estructura correcta (usuario@dominio.com). Si encuentra un error escribe el aviso debajo del campo correspondiente, si todos los datos son válidos, limpia el formulario y confirma el envío.
 
 ## Links del Proyecto
-* **Sitio Web Publicado (Vercel):** []
-* **Repositorio en GitHub:** []
+* **Sitio Web Publicado (Vercel):** [https://entrega1-desarrollo-web.vercel.app/]
+* **Repositorio en GitHub:** [https://github.com/TartarusBoss/Entrega1DesarrolloWeb.git]
 
 ## Procedimiento para ejecutar el proyecto
 
