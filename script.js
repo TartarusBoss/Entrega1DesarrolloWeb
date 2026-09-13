@@ -13,7 +13,7 @@ const productos = [
     categoria: "mma",
     precio: 95000,
     descripcion: "Cuero sintético con acolchado de alta densidad para sparring.",
-    imagen: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&q=80"
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/9/94/Boxing_gloves.jpg"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const productos = [
     categoria: "mma",
     precio: 130000,
     descripcion: "Protección muñeca doble agarre, ideal para entrenamiento pesado.",
-    imagen: "https://images.unsplash.com/photo-1517649763962-0c623266010b?w=400&q=80"
+    imagen: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&q=80"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const productos = [
     categoria: "futbol",
     precio: 75000,
     descripcion: "Tela transpirable con tecnología de secado rápido.",
-    imagen: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&q=80"
+    imagen: "https://futboldeprimera.com.co/wp-content/uploads/PhotoRoom-20240112_105329_5.png"
   },
   {
     id: 6,
